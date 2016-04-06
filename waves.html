@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="paper-full.min.js"></script>
+	<script type="text/paperscript" canvas="myCanvas">
+		var width, height, center;
+		var points = 10;
+		var smooth = true;
+		var path = new Path();
+		var mousePos = view.center/2;
+		var pathHeight = mousePos.y;
+		path.fillColor = 'lightBlue';
+		initializePath();
+
+		function initializePath() {
+		center = view.center;
+		width = view.size.width;
+		height = view.size.height/2;
+		path.segments[];
+		path.add(view.bounds.bottomLeft);
+		for (var i = 1; i < points; i++) {
+		var point = new Point(width / points * i, center.y);
+		path.add(point);
+		}
+		path.add(view.bounds.bottomRight);
+		path.fullySelected = true;
+		
+		}
+	</script>
+</head>
+<body>
+	<canvas id="myCanvas" resize="true"></canvas>
+</body>
+</html>

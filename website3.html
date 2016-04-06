@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+	<script src="./jquery-1.12.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+
+		<h1>
+			Madeleine
+			
+		</h1>
+	<div class="me">
+		<div style="left: 20px; top:100px;">me</div>
+		<div style="left: 100px; top: 400px;">me</div>
+		<div style="left: 300px; top: 0px;">me</div>
+		<div style="left: 600px; top: 100px;">me</div>
+		<div style="left: 100px; top: 350px;">me</div>
+	</div>
+	<div id="main">
+	
+
+		<div class="stretch">
+		
+
+			<img src="./justBanana.png" class ="banana" usemap="#banMap" />
+			
+			<a href="websiteRight.html" class="right">
+			</a>
+
+			<a href="websiteLeft.html" class="left">
+			</a>
+
+		</div>
+
+		
+
+	</div>
+	<script type="text/javascript">
+		
+		function meBuilder(){
+			var rando = Math.floor(Math.random() * (window.innerWidth - 109)) + 110;
+			var rando2 = Math.floor(Math.random() * (window.innerHeight - 29)) + 30;
+			var new_div = $("<div>");
+			$(".me").append(new_div);
+
+			new_div.css("left", rando + "px");
+			new_div.css("top", rando2 + "px");
+			$(".me").append(new_div);
+			new_div.html("me");
+
+
+		}
+
+		setInterval(meBuilder, 400);
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

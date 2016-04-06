@@ -1,0 +1,40 @@
+
+.block {
+	height: 150px;
+	padding: 50px;
+
+}
+
+.inner {
+	margin: 0 auto;
+	width: 100px;
+	height: 60%;
+}
+
+ #first {
+ 	background-color: rgb(232,216,229);
+}
+
+
+
+#second{
+	background-color: rgb(232,183,197);
+
+}
+
+body {
+
+	background-color: rgb(232,207,214);
+
+}
+
+html, body ,ul {
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	font-size: 15px;
+	font-family: Verdana;
+}
+

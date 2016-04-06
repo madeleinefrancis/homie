@@ -1,0 +1,33 @@
+
+<!doctype html>
+<html>
+<head>
+	<script type="text/javascript" src="paper-full.min.js"></script>
+		<script type="text/paperscript" canvas="myCanvas">
+
+			var topLeft = new Point(10, 10);
+			var rectSize = new Size(100, 100);
+			var path = new Path.Rectangle(topLeft, rectSize);
+			path.strokeColor = '#A9F5D0';
+			path.strokeWidth = 5;	
+
+			var circle1 = new Path.Circle(45, 48, 18);
+			circle1.fillColor = '#A9F5D0';
+
+			var circle2 = new Path.Circle(75, 48, 18);
+			circle2.fillColor = '#A9F5D0';
+
+
+			var triangle = new Path.RegularPolygon( 67, 60, 3, 35);
+			triangle.fillColor = '#A9F5D0';
+			triangle.rotate(60)
+
+
+
+		</script>
+</head>
+<body>
+
+	<canvas id="myCanvas" resize="true"></canvas>
+</body>
+</html>

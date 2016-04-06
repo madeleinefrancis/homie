@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+	<head>
+		<title>helloooo</title>
+		<style>
+		canvas { border: 1px solid #aaa;}
+		</style>
+		<script src="./two.js"></script>
+	</head>
+	<body>
+		<div id="draw"></div>
+
+		<script type="text/javascript">
+		
+			console.log("it's alive");
+			
+			var WIDTH = 285;
+			var HEIGHT = 200;
+			var CUTOFF = 20;
+			var CTRX = WIDTH/2;
+			
+			var elem = document.getElementById('draw');
+			var params = { width: WIDTH, height: HEIGHT };
+			var two = new Two(params).appendTo(elem);
+			
+			function arrToRGB(arr){
+				return "rgb(" + arr[0] + ", " + arr[1] + ", " + arr[2] + ")";
+			}
+			
+			function renderBack(mouseY){
+				var sky = two.makeRectangle(WIDTH/2, HEIGHT/2, 300, 200);
+				sky.fill = arrToRGB(colorGradientor(mouseY, [176,196,222], [0,0,205]));
+				sky.opacity = 0.25;
+				sky.noStroke();
+			
+			
+
+				var rect = two.makeRectangle(WIDTH/2, HEIGHT, 400, 90);
+				rect.fill = arrToRGB(colorGradientor(mouseY, [255,192,203], [255,105,180]));
+				rect.opacity = 0.5;
+				rect.noStroke();
+			
+				var ellipse = two.makeEllipse(WIDTH/2, 250, 150, 100);
+				ellipse.fill = '#90EE90'; 
+				ellipse.stroke= '#98FB98';
+				ellipse.linewidth = 5;
+			}
+			
+			function colorGradientor(mouseY, rgb_beginning, rgb_end){
+			
+			var w = (mouseY/HEIGHT) * 2 - 1;
+			
+			var w1 = (w + 1) / 2.0;
+			var w2 = 1 - w1;
+			
+			var rgb = [parseInt(rgb_beginning[0] * w1 + rgb_end[0] * w2),
+				parseInt(rgb_beginning[1] * w1 + rgb_end[1] * w2),
+					parseInt(rgb_beginning[2] * w1 + rgb_end[2] * w2)];
+			
+			return rgb;
+			}
+			
+			
+			
+			function tree(mouseY, treeGroup){
+				
+				if (mouseY >= CUTOFF){
+					var branch = two.makeRectangle(CTRX, 0, mouseY, mouseY);
+					branch.stroke = '#9ACD32';
+					branch.linewidth = 3;
+					branch.noFill();
+					treeGroup.add(branch);
+					tree(2*mouseY/3, treeGroup);
+				}
+			}
+				
+				
+			function rotateTree(mouseY){
+				two.clear();
+				var treeGroup = two.makeGroup();
+				treeGroup.rotation = (45 * (Math.PI / 180));
+				tree(mouseY, treeGroup);
+				renderBack(mouseY);
+				two.update();	
+			
+			}
+		
+		
+		
+			document.addEventListener("mousemove", function(event) {
+				rotateTree(event.pageY);
+			});
+			
+			
+			
+			
+			
+			
+
+			two.update();
+		</script>
+	</body>
+</html>
