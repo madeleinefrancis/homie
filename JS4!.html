@@ -14,10 +14,11 @@
 		
 			console.log("it's alive");
 			
-			var WIDTH = 285;
-			var HEIGHT = 200;
+			var WIDTH = 1000;
+			var HEIGHT = 750;
 			var CUTOFF = 20;
 			var CTRX = WIDTH/2;
+			var TODEGREES = Math.PI/180;
 			
 			var elem = document.getElementById('draw');
 			var params = { width: WIDTH, height: HEIGHT };
@@ -28,22 +29,82 @@
 			}
 			
 			function renderBack(mouseY){
-				var sky = two.makeRectangle(WIDTH/2, HEIGHT/2, 300, 200);
+				var sky = two.makeRectangle(WIDTH/2, HEIGHT/2, WIDTH, HEIGHT);
 				sky.fill = arrToRGB(colorGradientor(mouseY, [176,196,222], [0,0,205]));
 				sky.opacity = 0.25;
 				sky.noStroke();
 			
 			
-
-				var rect = two.makeRectangle(WIDTH/2, HEIGHT, 400, 90);
+				var rect = two.makeRectangle(WIDTH/2, HEIGHT, WIDTH, HEIGHT/4);
 				rect.fill = arrToRGB(colorGradientor(mouseY, [255,192,203], [255,105,180]));
 				rect.opacity = 0.5;
 				rect.noStroke();
 			
-				var ellipse = two.makeEllipse(WIDTH/2, 250, 150, 100);
+				var ellipse = two.makeEllipse(WIDTH/2, HEIGHT, 150, 100);
 				ellipse.fill = '#90EE90'; 
 				ellipse.stroke= '#98FB98';
 				ellipse.linewidth = 5;
+
+				var trunk = two.makeRectangle(CTRX, HEIGHT - 100, 10, 20);
+				
+				var trunk2 = two.makeRectangle(CTRX, HEIGHT - 110, 9, 10);
+
+				var trunk3 = two.makeRectangle(CTRX, HEIGHT - 120, 8, 10);
+
+				var trunk4 = two.makeRectangle(CTRX, HEIGHT - 130, 7, 10);
+
+				var trunk5 = two.makeRectangle(CTRX, HEIGHT - 138, 6, 8);
+
+				var trunk6 = two.makeRectangle(CTRX, HEIGHT - 144, 5, 6);
+
+				var trunk7 = two.makeRectangle(CTRX, HEIGHT - 150, 4, 6);
+
+				var trunk8 = two.makeRectangle(CTRX, HEIGHT - 155, 3, 5);
+
+				var roots = two.makePolygon(CTRX, HEIGHT - 90, 10, 3);
+				
+
+
+
+				var trunkAll = two.makeGroup(roots, trunk, trunk2, trunk3, trunk4, trunk5, trunk6, trunk7, trunk8);
+				trunkAll.noStroke();
+				trunkAll.fill = '#806B3C';
+
+				var rounded = Math.round(mouseY/5); 
+
+
+				var leaf = two.makeStar(CTRX, HEIGHT - 155, rounded, 5 , 20);
+				leaf.noStroke();
+				leaf.fill = '#79a6d2';
+
+				
+
+				var leaf = two.make
+
+				var stern = two.makePolygon(399, 500, 10, 3);
+				stern.fill = 'red';
+				stern.rotation = 30 * TODEGREES;
+
+				var bod = two.makeRectangle(412, 500, 20, 17);
+				bod.fill = 'red';
+
+				var bow = two.makePolygon(426, 500, 10, 3);
+				bow.fill = 'red';
+				bow.rotation =  90 * TODEGREES;
+
+				var sail = two.makePolygon(415, 478, 15, 3);
+				sail.rotation = 93 * TODEGREES;
+				sail.fill = '#66d9ff';
+				sail.noStroke();
+
+				
+
+				var boatBod = two.makeGroup(stern, bod, bow);
+				boatBod.noStroke();
+				boatBod.fill = '#ff8080';
+
+				var boat = two.makeGroup(boatBod, sail);
+				boat.translation.set(170 + mouseY, 155);
 			}
 			
 			function colorGradientor(mouseY, rgb_beginning, rgb_end){
@@ -84,6 +145,8 @@
 				two.update();	
 			
 			}
+
+			
 		
 		
 		
