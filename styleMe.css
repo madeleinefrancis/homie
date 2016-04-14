@@ -4,8 +4,19 @@ body {
 	background-size: cover;
 	background-position: bottom left;
 	background-attachment: fixed;
+	margin: 0;
+	padding: 0;
 	height: 100%;
 	width: 100%;
+
+}
+
+
+.title {
+	position: fixed;
+	top: 7%;
+	left: 4%;
+	
 }
 
 .bioText {
@@ -16,16 +27,28 @@ body {
 	width: 45%;
 	text-align: left;
 	line-height: 1.75;
-	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-
+	font-family: 'Istok Web', sans-serif;
+	font-size: 20px;
 
 }
-
-
 
 h5 {
-	font-size: 16px;
+	font-size: 22px;
 }
+
+.birdFoot {
+	position: fixed;
+	bottom: 1%;
+	right: 6%;
+}
+
+
+.back {
+	position: fixed;
+	bottom: 10%;
+	right: 2%;
+}
+
 
 
 
