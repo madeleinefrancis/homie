@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<title>helloooo</title>
+		<link rel="stylesheet" type="text/css" href="JS4!.css">
 		<style>
 		canvas { border: 1px solid #aaa;}
 		</style>
@@ -9,6 +10,14 @@
 	</head>
 	<body>
 		<div id="draw"></div>
+
+		<div id="pi">RaspberryPi Polaroid Camera</div>
+
+		<div id="ceo">ceo.ca</div>
+
+		<div id="infoi"> Wordpress</div>
+
+		<div id="navi">
 
 		<script type="text/javascript">
 		
@@ -45,38 +54,9 @@
 				ellipse.stroke= '#98FB98';
 				ellipse.linewidth = 5;
 
-				var trunk = two.makeRectangle(CTRX, HEIGHT - 100, 10, 20);
 				
-				var trunk2 = two.makeRectangle(CTRX, HEIGHT - 110, 9, 10);
-
-				var trunk3 = two.makeRectangle(CTRX, HEIGHT - 120, 8, 10);
-
-				var trunk4 = two.makeRectangle(CTRX, HEIGHT - 130, 7, 10);
-
-				var trunk5 = two.makeRectangle(CTRX, HEIGHT - 138, 6, 8);
-
-				var trunk6 = two.makeRectangle(CTRX, HEIGHT - 144, 5, 6);
-
-				var trunk7 = two.makeRectangle(CTRX, HEIGHT - 150, 4, 6);
-
-				var trunk8 = two.makeRectangle(CTRX, HEIGHT - 155, 3, 5);
-
-				var roots = two.makePolygon(CTRX, HEIGHT - 90, 10, 3);
-				
-
-
-
-				var trunkAll = two.makeGroup(roots, trunk, trunk2, trunk3, trunk4, trunk5, trunk6, trunk7, trunk8);
-				trunkAll.noStroke();
-				trunkAll.fill = '#806B3C';
 
 				var rounded = Math.round(mouseY/5); 
-
-
-				var leaf = two.makeStar(CTRX, HEIGHT - 155, rounded, 5 , 20);
-				leaf.noStroke();
-				leaf.fill = '#79a6d2';
-
 				
 
 				var leaf = two.make
@@ -161,6 +141,9 @@
 			
 
 			two.update();
+
 		</script>
+		</div>
+
 	</body>
 </html>
