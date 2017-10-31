@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One');
+
 body {
-	background-image: url(BioPic.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: bottom left;
@@ -27,7 +28,7 @@ body {
 	width: 45%;
 	text-align: left;
 	line-height: 1.75;
-	font-family: 'Istok Web', sans-serif;
+	font-family: 'Poiret One', cursive;
 	font-size: 20px;
 
 }
@@ -47,6 +48,74 @@ h5 {
 	position: fixed;
 	bottom: 10%;
 	right: 2%;
+}
+
+.float_me img{ 
+	position: absolute;
+	right: 10vw;
+	bottom: 0px;
+	height: 40vh;
+ }
+
+/* .drawing img{
+ 	height: 30vh;
+ }*/
+
+ .drawing.drinks img
+ {
+ 	position: absolute;
+ 	right: 70vw;
+ 	bottom: 0px;
+ 	height: 50vh;
+ }
+
+ .drawing.snake img
+ {
+ 	position: absolute;
+ 	right: 70vw;
+ 	height: 40vh;
+ }
+
+  .drawing.sniff img
+ {
+ 	position: absolute;
+ 	right: 10vw;
+ 	height: 25vh;
+ 	top :5vh;
+ }
+
+ /* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
 }
 
 
