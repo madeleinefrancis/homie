@@ -31,7 +31,7 @@ a {
 	height: 100%;
 }
 
-.right {
+.left {
 	position: absolute;
 	top: 49%;
 	left: 10vh;
@@ -39,10 +39,10 @@ a {
 	height: 20%;
 }
 
-.left {
+.right {
 	position: absolute;
 	top: 55%;
-	left: 60vh;
+	left: 80vh;
 	width: 40vh;
 	height: 25%;
 }
@@ -58,42 +58,24 @@ div {
 }
 
 
-
-
-
-
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-/* Styles */
+@media only screen and (max-width : 600px) {
+ 	.left{
+ 		position: absolute;
+		top: 49%;
+		left: 5vh;
+		width: 30vh;
+		height: 20%;
+ 	}
+ 	.right{
+ 		position: absolute;
+		top: 50%;
+		left: 40vh;
+		width: 50vh;
+		height: 30%;
+ 	}
+ 	.banana{
+ 		width: 100vw;
+ 	}
 }
 
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-/* Styles */
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-/* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-/* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-/* Styles */
-}
-
-/* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
-/* Styles */
-}
-
-/* Large screens ----------- */
-@media only screen  and (min-width : 1824px) {
-/* Styles */
-}
 

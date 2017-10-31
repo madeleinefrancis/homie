@@ -9,7 +9,6 @@ body {
 	padding: 0;
 	height: 100%;
 	width: 100%;
-
 }
 
 
@@ -17,7 +16,6 @@ body {
 	position: fixed;
 	top: 7%;
 	left: 4%;
-	
 }
 
 .bioText {
@@ -30,19 +28,11 @@ body {
 	line-height: 1.75;
 	font-family: 'Poiret One', cursive;
 	font-size: 20px;
-
 }
 
 h5 {
 	font-size: 22px;
 }
-
-.birdFoot {
-	position: fixed;
-	bottom: 1%;
-	right: 6%;
-}
-
 
 .back {
 	position: fixed;
@@ -56,10 +46,6 @@ h5 {
 	bottom: 0px;
 	height: 40vh;
  }
-
-/* .drawing img{
- 	height: 30vh;
- }*/
 
  .drawing.drinks img
  {
@@ -79,44 +65,60 @@ h5 {
   .drawing.sniff img
  {
  	position: absolute;
- 	right: 10vw;
+ 	right: 8vw;
  	height: 25vh;
  	top :5vh;
  }
 
- /* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-/* Styles */
+@media only screen and (max-width : 600px) {
+	.back {
+		position: fixed;
+		bottom: 8%;
+		right: 4%;
+	}
+	.bioText {
+
+		position: absolute;
+		top: 20%;
+		left: 35%;
+		width: 45%;
+		text-align: left;
+		line-height: 1.75;
+		font-family: 'Poiret One', cursive;
+		font-size: 20px;
+	}
+	.float_me img{ 
+		position: absolute;
+		right: 20vw;
+		bottom: 0px;
+		height: 30vh;
+ 	}
+
+ 	.drawing.drinks img
+ 	{
+	 	position: absolute;
+	 	right: 60vw;
+	 	bottom: 0px;
+	 	height: 30vh;
+ 	}
+
+	.drawing.snake img
+	{
+		position: absolute;
+		right: 70vw;
+		height: 40vh;
+	}
+
+	.drawing.sniff img
+	{
+		position: absolute;
+		right: 5vw;
+		height: 20vh;
+		top :5vh;
+	}
 }
 
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-/* Styles */
-}
 
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-/* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-/* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-/* Styles */
-}
-/* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
-/* Styles */
-}
-
-/* Large screens ----------- */
-@media only screen  and (min-width : 1824px) {
-/* Styles */
-}
 
 
 
