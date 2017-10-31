@@ -2,7 +2,7 @@
 
 body {
   background-image: url("vultureHill.jpeg");
-  /*background-size: auto 100vh;*/
+  background-size: cover;
   overflow-y: scroll;
   
 }
@@ -102,7 +102,7 @@ td {
 
 .close:hover { 
 	color: white;
-	background: 606061 }
+	background: #606061; }
 
 
 .back {
@@ -113,91 +113,10 @@ td {
 }
 
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-/* Styles */
-	body {
-		/*background-size: auto 80vw;*/
-	}
-	
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: auto 100vh;
+    }
 }
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-/* Styles */
-	body {
-		background-size: auto 100vh;
-	}
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-/* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-	body{
-		background-size: 100vw;
-	}
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-/* Styles */
-}
-
-	
-/* ----------- iPad Pro ----------- */
-/* Portrait and Landscape */
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px) 
-  and (-webkit-min-device-pixel-ratio: 1.5) {
-  	  	body {
-  		background-size: 100vh;
-  	}
-
-}
-
-/* Portrait */
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px) 
-  and (orientation: portrait) 
-  and (-webkit-min-device-pixel-ratio: 1.5) {
-  	body {
-  		background-size: 100vh;
-  	}
-}
-
-/* Landscape */
-@media only screen 
-  and (min-device-width: 1024px) 
-  and (max-device-width: 1366px) 
-  and (orientation: landscape) 
-  and (-webkit-min-device-pixel-ratio: 1.5) {
-  	body {
-  		background-size: 100vw;
-  	}
-}
-
-/* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
-/* Styles */
-  	body {
-  		background-size: 100vw;
-  	}
-}
-
-/* Large screens ----------- */
-@media only screen  and (min-width : 1824px) {
-/* Styles */
-  	body {
-  		background-size: 100vw;
-  	}
-}
-
-
 
 
