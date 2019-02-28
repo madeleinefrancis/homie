@@ -1,0 +1,121 @@
+
+
+body {
+  background-image: url("vultureHill.jpeg");
+  background-size: cover;
+  overflow-y: scroll;
+  
+}
+
+a {
+	font-family: 'Istok Web', sans-serif;
+	text-decoration: none;
+	color: black;
+	text-shadow: 0px 0px 32px #fff, 0px 0px 9px #f3eca0;
+	padding: 10px;
+}
+
+a:visited {
+	color: black;
+}
+
+a:hover {
+	color:#FCD357;
+}
+
+a.ceolink:hover {
+	color: #9D1C20;
+}
+
+.ceo-image {
+	max-width: 300px;
+}
+
+.wp-image {
+	max-width: 300px;
+	max-height: 300px;
+}
+
+td {
+	vertical-align: top;
+}
+
+.pi-pic {
+	max-width: 600px;
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: 'Istok Web', sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+
+.modalDialog:target {
+	opacity:0.9;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 600px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 2px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+	max-height: 90vh;
+	overflow-y: scroll;
+	
+}
+
+
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+.close:hover { 
+	color: white;
+	background: #606061; }
+
+
+.back {
+	max-width: 150px;
+	position: fixed;
+	top: 5%;
+	right: 3%;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-size: auto 100vh;
+    }
+}
+
+
